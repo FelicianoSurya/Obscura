@@ -12,6 +12,10 @@
             <img src="" alt="">
         </div>
     </div>
+
+    <div class="section-2">
+        
+    </div>
 </div>
 
 @include('obscura.template.footer')
