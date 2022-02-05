@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-fixed-top">
-
+    <img src="{{ asset('images/home/Navbar.png') }}" alt="navbar" width="100%">
 </nav>
 
 <div id="nav-icon3">
