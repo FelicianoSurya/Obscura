@@ -8,13 +8,25 @@
 
 <div class="main">
     <div class="section-1">
-        <div class="content container">
-            <img src="" alt="">
+        <div class="content m-auto d-flex flex-column justify-content-center align-items-center container">
+            <div class="d-flex justify-content-center welcome-text">
+                <img class="m-auto" src="{{ asset('images/home/HOME_Welcome.png') }}" alt="" width="50%">
+            </div>
+            <div class="text-content">
+                <h2>TO OBSCURA</h2>
+            </div>
+            <div class="line-asset d-flex justify-content-center">
+                <img src="{{ asset('images/home/HOME_Line.png') }}" alt="" width="70%">
+            </div>
         </div>
+
+        <div class="bottom-asset">
+            <img src="{{ asset('images/home/HOME_bottom.png') }}" alt="">
+        </div>        
     </div>
 
     <div class="section-2">
-        
+
     </div>
 </div>
 

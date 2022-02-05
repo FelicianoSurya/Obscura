@@ -4,8 +4,8 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
     height: 60px;
+    z-index: 1;
 }
 
 #nav-icon3{
@@ -93,17 +93,25 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: -1;
     transition: 0.2s;
-
 }
+.nav-overlay::before{
+    z-index: 1000;
+}
+.nav-overlay::after{
+    z-index: 1000;
+}
+
 .nav-overlay.active{
     opacity: 1!important;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.5)!important;
+    z-index: 1000;
 
     transition: 0.2s;
 }
+
 .nav-main{
     width: 30%;
     background-color: #3a7869;
@@ -113,7 +121,8 @@
     margin-top: auto;
     border-right: #cc6058 3pt solid;
     transition: 0.5s;
-
+    z-index: 1001;
+    position: fixed;
 }
 
 .nav-main.active{
