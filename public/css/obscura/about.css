@@ -1,0 +1,119 @@
+html{
+    overflow-x: hidden;
+}
+.section-1{
+    position: relative;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image:  url('../../images/about/bg-1.jpg');
+}
+
+.section-1 .title{
+    width: 50%;
+}
+
+.section-1 p{
+    font-family: tecmono;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+.section-1 .arrow{
+    width: 50px;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-2{
+    position: relative;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image:  url('../../images/about/bg-2.jpg');
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, rgba(57,121,105,1) 0%, rgba(224,96,90,1) 50%, rgba(57,121,105,1) 100%);
+}
+
+.section-2 .visimisi{
+    /* height: 100vh; */
+    /* width: 40%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image:  url('../../images/about/visimisi.png');
+}
+
+
+.border-gradient {
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to bottom, rgba(224,96,90,1), rgba(57,121,105,1));
+}
+
+.text-container {
+    transition: 0.2s;
+    background: transparent;
+}
+
+.text-container:hover {
+    cursor: pointer;
+}
+.text-container.active {
+    transition: 0.2s;
+    background: rgb(224,96,90);
+    background: linear-gradient(180deg, rgba(224,96,90,1) 0%, rgba(57,121,105,1) 100%);
+}
+
+.visi, .mission {
+    transition: 0.2s;
+    font-family: Allerta;
+    font-size: 50px;
+    color: #292627;
+    text-shadow: 2px 2px 0 white, 2px -2px 0 white, -2px 2px 0 white, -2px -2px 0 white, 2px 0px 0 white, 0px 2px 0 white, -2px 0px 0 white, 0px -2px 0 white;
+    transform: rotate(270deg);
+    height: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 10px;
+}
+
+.visi.active, .mission.active {
+    color: white;
+    text-shadow: none;
+    transition: 0.2s;
+
+}
+
+
+.content-list ul{
+    list-style-image: url('../../images/about/list.png');
+    font-family: tecmono;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+}
+
+.content-list li{
+    padding-left: 10px;
+}
+
+.section-3{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image:  url('../../images/about/bg-3.jpg');
+}

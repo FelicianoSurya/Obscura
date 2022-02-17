@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('obscura.page.landing', ['title' => 'OBSCURA']);
 });
 
+Route::get('/about-us', function () {
+    return view('obscura.page.about', ['title' => 'OBSCURA - ABOUT US']);
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

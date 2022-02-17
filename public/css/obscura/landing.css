@@ -1,18 +1,17 @@
 .main{
-    background-image: url('../../images/home/BACKGROUND-100-min.jpg');
+    /* background-image: url('../../images/home/BACKGROUND-100-min.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .section-1{
     position: relative;
-    min-height: 117vh;
-    max-height: 117vh;
-
-    /* background-blend-mode: saturation;
+    min-height: 100vh;
+    max-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:  linear-gradient(black, black), url(https://images.unsplash.com/photo-1536257104079-aa99c6460a5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);; */
+    background-position: center;
+    background-image:  url('../../images/home/bg-1.png');
 }
 
 .section-1 .bottom-asset{
@@ -45,14 +44,19 @@
     transform: translateY(-5px);
 }
 
-.section-2{
-    min-height: 117vh;
-    max-height: 117vh;
-    padding:0px 200px;
-    /* background-blend-mode: saturation;
+.main-section{
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:  linear-gradient(black, black), url(https://images.unsplash.com/photo-1536257104079-aa99c6460a5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);; */
+    background-position: center;
+    background-image:  url('../../images/home/bg-2.jpg');
+    min-height: 330vh;
+}
+
+.section-2{
+    min-height: 110vh;
+    padding:0px 200px;
+
+    
 }
 
 .section-2 .image-year{
@@ -86,3 +90,64 @@
     transform: translateY(-5px);
     cursor: pointer;
 }
+
+.section-3{
+    min-height: 110vh;
+}
+
+.section-4{
+    min-height: 110vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image:  url('../../images/home/gallery/GALLERY_ASET.png');
+    bottom: 0;
+}
+
+.section-5{
+    position: relative;
+    min-height: 110vh;
+    max-height: 110vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image:  url('../../images/home/bg-3.png');
+}
+
+/* swiper */
+
+.swiper {
+    width: 400px;
+    height: 500px;
+}
+
+.swiper-slide{
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.swiper-slide img{
+    width: 100% !important;
+}
+
+.swiper-slide .preview{
+    display: none;
+}
+
+.swiper-slide-active .icon{
+    display: none;
+}
+
+.swiper-slide-active .preview{
+    display: block;
+    
+}
+
+.swiper-slide-active{
+    transform: scale(1.2);
+    
+}
+
+/* swiper end */
