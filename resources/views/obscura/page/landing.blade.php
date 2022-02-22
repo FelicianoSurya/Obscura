@@ -102,13 +102,40 @@
             </div>
         </div>
         <div class="section-4 w-100">
+            
+
             <div class="d-flex w-100 h-100 justify-content-center align-items-center m-auto flex-column">
                 <img src="{{ asset('images/home/gallery/teks.png') }}" class="w-50" alt="">
             </div>
         </div>
     </div>
-    <div class="section-5">
-        
+    <div class="section-5 position-relative d-flex justify-content-center align-items-center">
+        <!-- asset absolute  -->
+        <img src="{{ asset('images/home/about/left-circle.png') }}" alt="" class="position-absolute left-circle">
+        <img src="{{ asset('images/home/about/right-circle.png') }}" alt="" class="position-absolute right-circle">
+        <img src="{{ asset('images/home/about/up.png') }}" alt="" class="position-absolute up-border">
+        <img src="{{ asset('images/home/about/bottom.png') }}" alt="" class="position-absolute bot-border">
+        <img src="{{ asset('images/home/about/left.png') }}" alt="" class="position-absolute left-border">
+        <img src="{{ asset('images/home/about/right.png') }}" alt="" class="position-absolute right-border">
+
+        <div class="section-5-content container d-flex ">
+            <div class="row justify-content-center align-items-center">  
+                <div class="col-lg-12 text-center">
+                    <h2>
+                        MORE ABOUT
+                    </h2>
+                </div>   
+                <div class="col-lg-12 text-center"> 
+                    <img class="w-50 col-lg-4 col-12" src="{{ asset('images/home/obscura-teks.png') }}" alt="">
+                </div>
+                <div class="col-lg-12 text-center"> 
+                    <p class="col-lg-4 col-12" ></p>
+                </div>
+                <div class="col-lg-12 text-center"> 
+                    <img src="{{ asset('images/home/explore-button.png') }}" alt="" class="w-25 col-lg-4 col-12">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

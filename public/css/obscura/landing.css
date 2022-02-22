@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 .main{
     /* background-image: url('../../images/home/BACKGROUND-100-min.jpg');
     background-repeat: no-repeat;
@@ -109,11 +113,48 @@
     min-height: 110vh;
     max-height: 110vh;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    background-image:  url('../../images/home/bg-3.png');
+    background-image:  url('../../images/home/about/Background.jpg');
 }
 
+.left-circle{
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+.right-circle{
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+
+}
+.up-border{
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.bot-border{
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.left-border{
+    height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.right-border{
+    height: 100%;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
 /* swiper */
 
 .swiper {
@@ -151,3 +192,9 @@
 }
 
 /* swiper end */
+
+
+.section-5-content{
+    font-family: tecmono;
+    color: white;
+}

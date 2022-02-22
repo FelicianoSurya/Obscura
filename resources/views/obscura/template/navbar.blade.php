@@ -10,11 +10,11 @@
 </div>
 
 <div class="nav-main d-flex flex-column">
-        <div class="nav-menu-container  m-auto container">
-            <div class="nav-menu py-2">lala</div>
-            <div class="nav-menu py-2">lala</div>
-            <div class="nav-menu py-2">lala</div>
-            <div class="nav-menu py-2">lala</div>
+        <div class="nav-menu-container  container">
+            <div class="nav-menu py-2">OBSCURA EXHIBITION</div>
+            <div class="nav-menu py-2">WEEKLY MEETING</div>
+            <div class="nav-menu py-2">GALLERY</div>
+            <div class="nav-menu py-2">ABOUT US</div>
         </div>
 </div>
 
