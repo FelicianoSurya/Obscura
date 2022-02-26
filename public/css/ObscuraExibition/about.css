@@ -25,56 +25,83 @@ html{
 
 .section-1{
     margin-top:140px;
+    background-color:#0B2A34;
 }
 .font-goudy{
     font-family: goudy  !important;
+}
+
+.section-1 .content-section-1{
+    height: 80vh;
+    position: relative;
 }
 
 .section p{
     text-align:center;
 }
 
-.section img:first-child{
+.section-1 .content-section-1 img:first-child{
     position: absolute;
     top:0;
     left:0;
 }
 
-.section img:nth-child(2){
+.section-1 .content-section-1 img:nth-child(2){
     position: absolute;
     bottom:-2px;
     left:0;
 }
 
-.section img:nth-child(3){
+.section-1 .content-section-1 img:nth-child(3){
     position: absolute;
     top:0;
     right:0;
 }
 
-.section img:nth-child(4){
+.section-1 .content-section-1 img:nth-child(4){
     position: absolute;
     bottom:-2px;
     right:0;
+}
+
+.section-1 .content-section-1 img:nth-child(5){
+    position: absolute;
+    top: -20px;
+    left: center;
+}
+
+.section-1 .content-section-1 img:nth-child(6){
+    position: absolute;
+    bottom: -20px;
+    left: center;
+    z-index: 1;
+    transform: rotate(180deg);
 }
 
 .section-bawah img:first-child{
     position: absolute;
-    top:-2px;
+    bottom:-2px;
     left:0;
 }
 
-.section-section img:nth-child(3){
+.section-1 .content-section-1 .topic img{
+    position: inherit;
+}
+
+.section-bawah img:nth-child(2){
     position: absolute;
-    top:-2px;
+    bottom:-2px;
     right:0;
 }
 
-.section-1 img:nth-child(5){
+.section-bawah .pembatas_atas{
     position: absolute;
-    top:center;
-    z-index: 1;
+    top:-30px;
     left:center;
+}
+
+.section-1 .content-section-1{
+    padding:70px;
 }
 
 .section-1 .topic{
@@ -89,35 +116,23 @@ html{
     margin:0;
 }
 
-.section-1 .topic p:first-child{
-    font-size: 7em;
+.section-1 .topic img{
+    width: 100%;
+}
+
+.section-1 .topic p{
+    text-align: left;
+    font-size: 4.5em;
     font-weight: bold;
 }
 
 .section-1 .topic p:nth-child(2){
-    font-size: 2em;
+    letter-spacing: 0.2cm;
     margin-top: -30px;
 }
 
-.section-1 .button{
-    position: absolute;
-    bottom: 70px;
-    left: center;
-
-}
-
-.section-1 button{
-    z-index: 99;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding:10px 40px;
-    border-radius: 50px;
-    background-color: transparent;
-    border:1px solid #CCE793;
-}
-
 .section-2{
-    height: 140vh;
+    border-top:2px solid #CCE793;
 }
 
 .section-2 .topic p:first-child{
@@ -131,17 +146,13 @@ html{
 }
 
 .section-2 .box-image{
-    width: 600px;
-    height: 350px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
     background-color: black;
 }
 
-.section-2 .slider{
-    overflow-x: scroll;
-}
-
 .section-2 .button-see{
-    width:700px;
     position: absolute;
     bottom:200px;
 }
@@ -150,22 +161,47 @@ html{
     z-index: 99;
     font-weight: bold;
     font-size: 1.2em;
-    padding:10px 100px;
+    padding:10px 70px;
     border-radius: 20px;
     background-color: #1F5263 !important;
     border:1px solid #CCE793;
 }
 
+.section-2 .button-see img{
+    position:initial;
+}
+
 .section-3{
-    background-color: #0B2A34;
-    border-top:2px solid #CCE793;
     border-bottom:2px solid #CCE793;
-    height: 120vh;
+}
+
+.section-3_4 img:first-child{
+    position: absolute;
+    top:-2px;
+    left:0;
+}
+
+.section-3_4 img:nth-child(2){
+    position: absolute;
+    bottom:-2px;
+    left:0;
+}
+
+.section-3_4 img:nth-child(3){
+    position: absolute;
+    top:-2px;
+    right:0;
+}
+
+.section-3_4 img:nth-child(4){
+    position: absolute;
+    bottom:-2px;
+    right:0;
 }
 
 .section-3_4 img:nth-child(5){
     position: absolute;
-    top: -25px;
+    bottom: -25px;
     left:center;
 }
 
@@ -227,13 +263,43 @@ html{
     width:300px;
 }
 
+@media (max-width : 1000px){
+    .section-1 .topic .judul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-1 .topic img{
+        width: 70%;
+    }
+}
+
 @media (max-width:850px){
+    .section-1 .topic{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-1 .content-section-1{
+        padding:0px;
+    }
+    
     .frame-size{
         width:100px;
     }
 
-    .button-see img{
-        display: none;
+    .section-1{
+        height: 80vh;
+    }
+
+    .section-1 .topic{
+        padding:50px 0px;
+        margin:0;
+    }
+
+    .section-1 .topic img{
+        width: 300px;
     }
 
     .section .topic p:first-child{
@@ -248,10 +314,18 @@ html{
         font-size: 1.5em;
         margin-top: 0px;
     }
+
+    .section-2 .button-see img{
+        display: none;
+    }
     
     .section-3_4 .topic p:first-child{
         font-size: 2em;
         margin-top:60px;
+    }
+    
+    .section-3_4 img:nth-child(6){
+        width: 250px;
     }
 
     .section-3{

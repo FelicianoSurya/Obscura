@@ -28,7 +28,7 @@
 <body>
 
 
-    <!-- @include('ObscuraExibition.template.navbar') -->
+    @include('ObscuraExibition.template.navbar')
 
     @yield('content')
     

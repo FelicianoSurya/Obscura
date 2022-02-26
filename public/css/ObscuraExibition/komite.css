@@ -24,6 +24,7 @@ html{
 }
 
 .section-1{
+    height: 40vh;
     margin-top:140px;
 }
 .font-goudy{
@@ -32,6 +33,10 @@ html{
 
 .section p{
     text-align:center;
+}
+
+.section-1 p{
+    font-size: 6em;
 }
 
 .section img:first-child{
@@ -64,60 +69,14 @@ html{
     left:0;
 }
 
-.section-section img:nth-child(3){
+.section-bawah img:nth-child(3){
     position: absolute;
     top:-2px;
     right:0;
 }
 
-.section-1 img:nth-child(5){
-    position: absolute;
-    top:center;
-    z-index: 1;
-    left:center;
-}
-
-.section-1 .topic{
-    z-index: 99;
-}
-
-.section-1 .topic p{
-    font-family: goudy;
-    background: -webkit-linear-gradient(#CCE793 45%, #103F51);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    margin:0;
-}
-
-.section-1 .topic p:first-child{
-    font-size: 7em;
-    font-weight: bold;
-}
-
-.section-1 .topic p:nth-child(2){
-    font-size: 2em;
-    margin-top: -30px;
-}
-
-.section-1 .button{
-    position: absolute;
-    bottom: 70px;
-    left: center;
-
-}
-
-.section-1 button{
-    z-index: 99;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding:10px 40px;
-    border-radius: 50px;
-    background-color: transparent;
-    border:1px solid #CCE793;
-}
-
 .section-2{
-    height: 140vh;
+    height: 100vh;
 }
 
 .section-2 .topic p:first-child{
@@ -127,7 +86,6 @@ html{
 .section-2 .topic p:nth-child(2){
     font-size: 1.3em;
     margin-top:-20px;
-    color:white;
 }
 
 .section-2 .box-image{
@@ -138,6 +96,13 @@ html{
 
 .section-2 .slider{
     overflow-x: scroll;
+}
+
+.section-2 .divisi .img-garis{
+    position: relative;
+    width: 50px;
+    height: 10px;
+    margin-top: -30px;
 }
 
 .section-2 .button-see{
@@ -156,84 +121,55 @@ html{
     border:1px solid #CCE793;
 }
 
-.section-3{
-    background-color: #0B2A34;
-    border-top:2px solid #CCE793;
-    border-bottom:2px solid #CCE793;
-    height: 120vh;
+.komite{
+    margin-top: 100px;
 }
 
-.section-3_4 img:nth-child(5){
+.image-box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.image-box .image{
+    width: 200px;
+    height: 200px;
+    background-color:grey;
+    border-radius: 50%;
+}
+
+.komite img{
     position: absolute;
-    top: -25px;
-    left:center;
+    left: center;
+    bottom:-30px !important;
 }
 
-.section-3_4 .topic p:first-child{
-    font-size: 3.5em;
-    margin-top:60px;
-}
-
-.section-3_4 .button-see{
-    width:700px;
-    position: absolute;
-    bottom:100px;
-}
-
-.section-3_4 button{
-    z-index: 99;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding:10px 100px;
-    border-radius: 20px;
-    background-color: #1F5263 !important;
-    border:1px solid #CCE793;
-}
-
-.section-3_4 .box-date{
-    width: 900px;
-    height: 300px;
-    background-color: #242424;
-    border:2px solid #CCE793;
-    border-radius: 20px;
-    
-}
-
-.section-3_4 .box-date p{
-    font-size: 3em;
-    color: #CCE793;
-}
-
-.section-3_4 .skkm{
-    color:white;    
-    margin-top:-20px;
-}
-
-.section-4{
-    height: 120vh;
-}
-
-.section-4 img:nth-child(5){
-    position: absolute;
-    top: -25px;
-    left:center;
-}
-
-.section-4 .topic p:first-child{
-    margin-top:120px;
+.komite .image-bawah{
+    padding: 0px 200px;
 }
 
 .frame-size{
     width:300px;
 }
 
-@media (max-width:850px){
+.pembatas{
+    position: absolute;
+    bottom:-25px;
+    left: center;
+}
+
+.akhir{
+    border-bottom: 2px solid #CCE793;
+}
+@media (max-width:1000px){
+    .komite .image-bawah{
+        padding: 0px 100px;
+    }
+}
+
+@media (max-width:900px){
     .frame-size{
         width:100px;
-    }
-
-    .button-see img{
-        display: none;
     }
 
     .section .topic p:first-child{
@@ -261,5 +197,23 @@ html{
     .section-4{
         height: 100vh;
     }
+}
 
+@media (max-width:700px){
+    .section-2{
+        height: 200vh;
+    }
+    
+    .komite{
+        margin-top:0;
+    }
+
+    .komite .kom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .komite .kom .image-box{
+        margin-top:70px;
+    }
 }

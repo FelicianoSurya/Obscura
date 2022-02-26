@@ -32,4 +32,16 @@ Route::get('/obscura-exibition',function(){
     return view('ObscuraExibition.page.landing',['title' => 'OBSCURA EXIBITION']);
 });
 
+Route::get('/obscura-exibition/about-us',function(){
+    return view('ObscuraExibition.page.about',['title' => 'ABOUT OBSCURA EXIBITION']);
+});
+
+Route::get('/obscura-exibition/komite',function(){
+    return view('ObscuraExibition.page.komite',['title' => 'OUR COMMITTEE']);
+});
+
+Route::get('/obscura-exibition/gallery',function(){
+    return view('ObscuraExibition.page.gallery',['title' => 'Gallery']);
+});
+
 

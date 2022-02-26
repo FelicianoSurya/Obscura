@@ -21,3 +21,9 @@ footer .footer-center p{
 footer h4{
     margin-bottom: 30px;
 }
+
+@media (max-width:988px){
+    footer h4{
+        font-size: 25px;
+    }
+}
