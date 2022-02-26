@@ -1,5 +1,4 @@
-Copyright (c) 2010, Matt McInerney (matt@pixelspread.com),
-with Reserved Font Name Allerta.
+Copyright (c) 2010, Barry Schwartz (chemoelectric@chemoelectric.org)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
