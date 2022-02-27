@@ -1,10 +1,10 @@
 <footer class="container-fluid-footer  justify-content-center ">
-    <div class="row justify-content-center">
+    <div class="row w-100 justify-content-center mb-5">
         <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center">
-            <img src="{{ asset('images/logo-obscura.png') }}" class="w-25"alt="">
+            <img src="{{ asset('images/logo-obscura.png') }}" class="w-50"alt="">
         </div>
     </div>
-    <div class="row">
+    <div class="row w-100">
         <div class="col-lg-4 col-12 d-flex flex-column justify-content-center text-center">
             <h2>CONNECT WITH US</h2>
             <a href="">INSTAGRAM</a>

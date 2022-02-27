@@ -1,25 +1,44 @@
 .main{
-    background-image: url('../../images/meeting/WM_Background-min.png');
+    background-image: url('../../images/meeting/bg/product.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top:320px;
+    background-position: top left;
+    min-height: 100vh;
+    padding-top: 100px;
+    
 }
 
-.section-1{
-    width:100%;
-    padding-left:150px;
+.weekly-content{
+    padding-left: 100px;
 }
 
-.top-section {
-    color:white;
+.border-gradient{
+    width: 75%;
+    height: 10px;
+    background: rgb(224,96,90);
+    background: linear-gradient(to right, rgba(57,121,105,1) 0%, rgba(224,96,90,1) 50%, rgba(57,121,105,1) 100%);
 }
 
-.top-section img{
-    transform: rotate(90deg);
-    width:20px;
-    height:20px;
+.meeting-details{
+    color: white;
+    font-family: tecmono;
 }
 
-.section-2{
-    color:white;
+.meeting-details h1{
+    font-size: 20px;
+}
+
+.meeting-details h3{
+    font-size: 14px;
+    color: rgba(57,121,105,1);
+}
+
+.meeting-details p{
+    font-size: 14px;
+}
+
+.desc-text{
+    color: white;
+    font-family: tecmono;
+    font-size: 12px;
 }

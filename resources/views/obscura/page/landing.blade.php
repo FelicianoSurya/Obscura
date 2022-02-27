@@ -11,7 +11,7 @@
     <div class="section-1 d-flex justify-content-center align-items-center">
         <div class="content m-auto d-flex flex-column justify-content-center align-items-center container">
             <div class="d-flex justify-content-center welcome-text">
-                <img class="m-auto" src="{{ asset('images/home/HOME_Welcome.png') }}" alt="" width="50%">
+                <img class="m-auto" src="{{ asset('images/home/HOME_Welcome.png') }}" alt="" >
             </div>
             <div class="text-content">
                 <h2>TO OBSCURA</h2>
@@ -26,47 +26,47 @@
 
         <div class="bottom-asset">
             <img src="{{ asset('images/home/HOME_bottom.png') }}" alt="">
-        </div>        
+        </div>
     </div>
-    <div class="main-section">
-        <div class="section-2 d-flex flex-column justify-content-center align-items-center pt-5">
-            <div class="content d-flex align-items-center container">
-                <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center">
-                    <span><img src="{{ asset('images/home/BUTTON SEGITIGA.png') }}" alt=""></span>
-                    <span></span>
-                    <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_Cover Pameran.png') }}" width="70%" alt="">
-                    <span class="reverse"><img src="{{ asset('images/home/BUTTON SEGITIGA.png') }}" alt=""></span>
-                </div>
-                <div class="col-lg-7 d-flex flex-column align-items-center">
-                    <div class="d-flex justify-content-between align-items-end">
-                        <img src="{{ asset('images/home/exibition/OBS EXHI_TEKS_Obscura Exhibition.png') }}" width="70%" alt="">
-                        <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_2022.png') }}" class="image-year" alt="">
+    <div class="main-section position-relative">
+        <img src="{{ asset('images/home/gallery/teks.png') }}" class="position-absolute obscura-gallery" alt="">
+
+        <div class="section-2 d-flex flex-column justify-content-center align-items-center pt-5 container">
+            <div class="content d-flex align-items-center row">
+                    <div class="col-lg-5 col-12 d-flex flex-column justify-content-center align-items-center">
+                        <span><img src="{{ asset('images/home/BUTTON SEGITIGA.png') }}" alt=""></span>
+                        <span></span>
+                        <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_Cover Pameran.png') }}" width="70%" alt="">
+                        <span class="reverse"><img src="{{ asset('images/home/BUTTON SEGITIGA.png') }}" alt=""></span>
                     </div>
-                    <div class="d-flex justify-content-start  align-items-center mt-4">
-                        <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_Garis Merah Hijau.png') }}" class="pe-4" width="44%" alt="">
-                        <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_Trapesium.png') }}" width="44%" alt="">
+                    <div class="col-lg-7 col-12 d-flex flex-column align-items-center">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <img src="{{ asset('images/home/exibition/OBS EXHI_TEKS_Obscura Exhibition.png') }}" width="70%" alt="">
+                            <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_2022.png') }}" class="image-year" alt="">
+                        </div>
+                        <div class="d-flex justify-content-start  align-items-center mt-4">
+                            <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_Garis Merah Hijau.png') }}" class="pe-4" width="44%" alt="">
+                            <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_Trapesium.png') }}" width="44%" alt="">
+                        </div>
+                        <div class="weekly-desc pt-3">
+                            <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugit unde nobis, error voluptas architecto? Exercitationem temporibus provident, quibusdam deserunt deleniti, qui vero maxime facere dolorem itaque possimus amet velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptate accusantium nobis error nulla ad ea dolorum adipisci sed, dignissimos facilis voluptates veniam ullam pariatur, nemo ducimus eum, dolor eos.</p>
+                        </div>
                     </div>
-                    <div class="weekly-desc pt-3">
-                        <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugit unde nobis, error voluptas architecto? Exercitationem temporibus provident, quibusdam deserunt deleniti, qui vero maxime facere dolorem itaque possimus amet velit!Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptate accusantium nobis error nulla ad ea dolorum adipisci sed, dignissimos facilis voluptates veniam ullam pariatur, nemo ducimus eum, dolor eos.</p>
-                    </div>
-                </div>
             </div>
             <div class="button-asset d-flex mt-5 align-items-center justify-content-end">
                 <img src="{{ asset('images/home/exibition/OBS EXHI_BUTTON_Visit Us.png') }}" width="20%" alt="">
             </div>
         </div>
 
-        <div class="section-3 container d-flex align-items-center justify-content-center">
-            <div class="row justify-content-center align-items-center">
+        <div class="section-3 container d-flex align-items-start pt-5 justify-content-center">
+            <div class="row justify-content-center align-items-center position-relative">
 
-                    <div class="title-section-3 col-6 d-flex flex-column align-items-end">
-                        <img src="{{ asset('images/home/meeting/text-week.png') }}" class="w-75"alt="">
-                        <a href="" class="w-25"><img src="{{ asset('images/home/meeting/button.png') }}" class="w-100"alt=""></a>
-                    
+                    <div class="title-section-3 col-6 d-flex justify-content-center">
+                        <img src="{{ asset('images/home/meeting/text-week.png') }}" class="w-100"alt="">
                     </div>
                     <!-- Slider main container -->
-                    <div class="col-6">
-                        <div class="swiper swiper-1 col-6">
+                    <div class="col-12 ">
+                        <div class="swiper swiper-weekly swiper-1 col-6">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -94,19 +94,23 @@
                             </div>
 
                             <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev swiper-button-prev-weekly">
+                                <img src="{{ asset('images/home/triangle_left.png') }}" alt="">
+
+                            </div>
+                            <div class="swiper-button-next swiper-button-next-weekly">
+                                <img src="{{ asset('images/home/triangle_right.png') }}" alt="">
+
+                            </div>
 
                         </div>
+                    </div>
+                    <div class="title-section-3 col-6 d-flex justify-content-center pt-2">
+                        <a href="" class="w-50"><img src="{{ asset('images/home/meeting/button.png') }}" class="w-100"alt=""></a>
                     </div>
             </div>
         </div>
         <div class="section-4 w-100">
-            
-
-            <div class="d-flex w-100 h-100 justify-content-center align-items-center m-auto flex-column">
-                <img src="{{ asset('images/home/gallery/teks.png') }}" class="w-50" alt="">
-            </div>
         </div>
     </div>
     <div class="section-5 position-relative d-flex justify-content-center align-items-center">
@@ -137,21 +141,30 @@
             </div>
         </div>
     </div>
+    @include('obscura.template.footer')
 </div>
 
-@include('obscura.template.footer')
+
 @endsection
 
 @section('custom-js')
-    <script src="{{ asset('js/cms/page/about-us.js') }}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper-weekly', {
             // Optional parameters
-            direction: 'vertical',
-            
+            direction: 'horizontal',
+            slidesPerView: 3,
+            speed:400,
+            centeredSlides:true,
+
+            loop: true,
+            // autoHeight:true,
+            navigation: {
+                nextEl: '.swiper-button-next-weekly',
+                prevEl: '.swiper-button-prev-weekly',
+            }
             
         });
     </script>
