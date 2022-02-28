@@ -130,11 +130,7 @@ html{
     color:white;
 }
 
-.section-2 .box-image{
-    width: 600px;
-    height: 350px;
-    background-color: black;
-}
+
 
 .section-2 .slider{
     overflow-x: scroll;
@@ -143,7 +139,7 @@ html{
 .section-2 .button-see{
     width:700px;
     position: absolute;
-    bottom:200px;
+    bottom:100px;
 }
 
 .section-2 button{
@@ -226,6 +222,48 @@ html{
 .frame-size{
     width:300px;
 }
+
+.swiper{
+    width: 700px;
+    height: 400px;
+    overflow: visible!important;
+}
+
+.section-2 .box-image{
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.section-2 .box-image img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width:850px){
+    .swiper{
+        width: 400px;
+        height: 400px;
+        overflow: visible!important;
+    }
+    
+    .section-2 .box-image{
+        width: 600px;
+        height: 400px;
+        background-color: black;
+        overflow: hidden;
+    }
+    
+    .section-2 .box-image img{
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 
 @media (max-width:850px){
     .frame-size{

@@ -7,7 +7,6 @@
     <!-- Page Title -->
     <title>{{ $title }}</title>
     <!-- Obscura Icon -->
-    <link rel="shorcut icon" href="{{ asset('images/umn-eco-logo.png') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/obscura/template/app.css') }}">

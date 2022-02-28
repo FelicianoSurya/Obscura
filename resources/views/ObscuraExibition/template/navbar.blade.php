@@ -36,12 +36,12 @@
 @endguest
 </nav>
 
-<!-- <div id="nav-icon3">
+<div id="nav-icon3">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-</div> -->
+</div>
 
 <div class="nav-main d-flex flex-column">
         <div class="nav-menu-container  container">

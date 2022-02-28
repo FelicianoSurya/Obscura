@@ -145,16 +145,11 @@ html{
     color:white;
 }
 
-.section-2 .box-image{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    background-color: black;
-}
+
 
 .section-2 .button-see{
     position: absolute;
-    bottom:200px;
+    bottom: 100px;
 }
 
 .section-2 button{
@@ -226,19 +221,7 @@ html{
     border:1px solid #CCE793;
 }
 
-.section-3_4 .box-date{
-    width: 900px;
-    height: 300px;
-    background-color: #242424;
-    border:2px solid #CCE793;
-    border-radius: 20px;
-    
-}
 
-.section-3_4 .box-date p{
-    font-size: 3em;
-    color: #CCE793;
-}
 
 .section-3_4 .skkm{
     color:white;    
@@ -261,6 +244,64 @@ html{
 
 .frame-size{
     width:300px;
+}
+
+.swiper-komitee{
+    width: 900px;
+    height: 300px;
+    overflow: visible!important;
+}
+
+.box-image-komitee{
+    width: 300px;
+    border-radius: 50%;
+    
+    background-color: black;
+    overflow: hidden;
+}
+
+.box-image-komitee img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-event{
+    width: 500px;
+    height: 300px;
+    overflow: visible!important;
+}
+
+.section-3_4 .box-date{
+    width: 500px;
+    height: 300px;
+    background-color: #242424;
+    border:2px solid #CCE793;
+    border-radius: 20px;
+    
+}
+
+.section-3_4 .box-date p{
+    font-size: 3em;
+    color: #CCE793;
+}
+
+@media (max-width:850px){
+    .swiper-komitee{
+        margin-top: 100px;
+        width: 600px;
+        height: 200px;
+        overflow: visible!important;
+    }
+    
+    .box-image-komitee{
+        width: 200px;
+        border-radius: 50%;
+        
+        background-color: black;
+        overflow: hidden;
+    }
+    
 }
 
 @media (max-width : 1000px){

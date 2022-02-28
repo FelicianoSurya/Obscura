@@ -1,10 +1,14 @@
+html, body {
+    overflow-x: hidden;
+}
+
 .navbar {
     position: fixed;
     width: 100%;
     padding:0;
     top: -2px;
     left: -1px;
-    z-index: 1;
+    z-index: 100;
     background-color: #0B2A34;
 }
 
@@ -20,9 +24,11 @@
 }
 
 #nav-icon3{
+    top: 0;
+    right: 0;
     background-color: transparent;
-    margin-top: 25px;
-    margin-left: 100px;
+    margin-top: 80px;
+    /* margin-left: 100px; */
     height: 45px;
     width: 25px;
     position: fixed;
@@ -36,15 +42,19 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
-    z-index: 1002;
+    transform: translate(-50%, -50%);
+    margin-right: 50px;
+
+    z-index: 105;
+
   }
   
 #nav-icon3 span{
     display: block;
     position: absolute;
-    height: 5px;
+    height: 3px;
     width: 100%;
-    background: white;
+    background: #B5E48C;
     opacity: 1;
     right: 0;
     -webkit-transform: rotate(0deg);
@@ -55,7 +65,6 @@
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
-    transform: skew(40deg);
 }
 
 .font-yellow{
@@ -116,18 +125,12 @@
     z-index: -1;
     transition: 0.2s;
 }
-.nav-overlay::before{
-    z-index: 1000;
-}
-.nav-overlay::after{
-    z-index: 1000;
-}
 
 .nav-overlay.active{
     opacity: 1!important;
-    z-index: 1000;
+    z-index: 101;
     background: rgba(0, 0, 0, 0.5)!important;
-    z-index: 1000;
+    z-index: 101;
 
     transition: 0.2s;
 }
@@ -137,16 +140,15 @@
     color: white;
     font-size: 24px;
     width: 30%;
-    background-image: url('../../../images/nav.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #06161C;
     height: 100%;
     top: 0;
-    transform: translateX(-110%);
+    transform: translateX(110%);
     margin-top: auto;
     transition: 0.5s;
-    z-index: 1001;
+    z-index: 102;
     position: fixed;
+    right: 0;
 }
 
 .nav-main.active{
@@ -181,19 +183,8 @@
         padding-left: 10%;
     }
     .nav-main{
-        font-family: tecmono;
-        color: white;
-        font-size: 24px;
+        
         width: 100%;
-        background-image: url('../../../images/nav.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        top: 0;
-        transform: translateX(-110%);
-        margin-top: auto;
-        transition: 0.5s;
-        z-index: 1001;
-        position: fixed;
+        
     }
 }

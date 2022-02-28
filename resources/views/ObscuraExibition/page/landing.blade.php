@@ -32,12 +32,29 @@
             <p class="font-gradient font-goudy fw-bold">MOST FAVOURITE PHOTOS</p>
             <p class="font-goudy fst-italic">An amazing photo are awaits!</p>
         </div>
-        <div class="container d-flex justify-content-around slider mt-5">
-            <div class="box-image"></div>
-            <div class="box-image"></div>
-            <div class="box-image"></div>
-        </div>
-        <div class="button-see d-flex justify-content-center align-items-center">
+            <!-- Slider main container -->
+            <div class="row pb-5 mb-5">
+                <div class="swiper">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide box-image"><img src="https://images.unsplash.com/photo-1646051326596-8ebfbb6f780e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></div>
+                        <div class="swiper-slide box-image"><img src="https://images.unsplash.com/photo-1645991897950-1078bb654f05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""></div>
+                        <div class="swiper-slide box-image"></div>
+                        <div class="swiper-slide box-image"></div>
+                        <div class="swiper-slide box-image"></div>
+
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-scrollbar"></div>
+
+
+                </div>
+            </div>
+        
+        <div class="button-see d-flex justify-content-center align-items-center mt-5">
             <img class="mt-3" src="{{ asset('images/ObscuraExibition/Frame/line_kiri.png') }}" alt="line_kiri" width="150">
             <a href="{{ route('galleryExhibition') }}"><button class="font-yellow button-about">See More</button></a>
             <img class="mt-3" src="{{ asset('images/ObscuraExibition/Frame/line_kanan.png') }}" alt="line_kanan" width="150">
@@ -99,11 +116,18 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'vertical',
-            
-            
-        });
+       const swiper = new Swiper('.swiper', {
+            // Default parameters
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+        })
     </script>
 @endsection
