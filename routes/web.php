@@ -21,9 +21,9 @@ Route::get('/about-us', function () {
     return view('obscura.page.about', ['title' => 'OBSCURA - ABOUT US']);
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/weekly-meeting', [App\Http\Controllers\WeeklyMeeting::class, 'index'])->name('weeklymeeting');
 
 // Obscura Exibition route
@@ -33,18 +33,18 @@ Route::get('/weekly-meeting', [App\Http\Controllers\WeeklyMeeting::class, 'index
 Route::group(['prefix' => 'obscura-exhibition'], function () {
 	Route::get('/',function(){
         return view('ObscuraExibition.page.landing',['title' => 'OBSCURA EXHIBITION']);
-    });
+    })->name('homeExhibition');
     
     Route::get('/about-us',function(){
         return view('ObscuraExibition.page.about',['title' => 'ABOUT OBSCURA EXHIBITION']);
-    });
+    })->name('aboutExhibition');
     
     Route::get('/komite',function(){
         return view('ObscuraExibition.page.komite',['title' => 'OUR COMMITTEE']);
-    });
+    })->name('komiteExhibition');
     
     Route::get('/gallery',function(){
-        return view('ObscuraExibition.page.gallery',['title' => 'Gallery']);
-    });
+        return view('ObscuraExibition.page.gallery',['title' => 'GALLERY']);
+    })->name('galleryExhibition');
 });
 

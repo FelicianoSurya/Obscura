@@ -19,7 +19,7 @@
             <p class="fst-italic">Capture the Light Through Diversity</p>
         </div>
         <div class="button w-100 d-flex align-items-center justify-content-center">
-            <button class="font-gradient button-about">More About Obscura Exibition</button>
+            <a href="{{ route('aboutExhibition') }}"><button class="font-gradient button-about">More About Obscura Exibition</button></a>
         </div>
     </div>
     <div class="section-2 section-bawah section d-flex flex-column align-items-center"> 
@@ -39,7 +39,7 @@
         </div>
         <div class="button-see d-flex justify-content-center align-items-center">
             <img class="mt-3" src="{{ asset('images/ObscuraExibition/Frame/line_kiri.png') }}" alt="line_kiri" width="150">
-            <button class="font-yellow button-about">See More</button>
+            <a href="{{ route('galleryExhibition') }}"><button class="font-yellow button-about">See More</button></a>
             <img class="mt-3" src="{{ asset('images/ObscuraExibition/Frame/line_kanan.png') }}" alt="line_kanan" width="150">
         </div>
     </div>

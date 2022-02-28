@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Page Title -->
-    <title>{{ $title }}</title>
+    <title>OBSCURA EXHIBITION</title>
     <!-- Obscura Icon -->
     <link rel="shorcut icon" href="{{ asset('images/umn-eco-logo.png') }}">
 

@@ -19,7 +19,7 @@
             <div class="topic row d-flex w-100 p-lg-5">
                 <div class="judul col-lg-7 col-12 p-0">
                     <p>OBSCURA</p>
-                    <p>EXIBITION:</p>
+                    <p>EXHIBITION:</p>
                 </div>
                 <div class="col-lg-5 col-12 d-flex justify-content-center">
                     <img src="{{ asset('images/ObscuraExibition/Logo/logo.png') }}" alt="logo">
@@ -43,7 +43,7 @@
         </div>
         <div class="button-see d-flex justify-content-between align-items-center">
             <img src="{{ asset('images/ObscuraExibition/Frame/line_kiri.png') }}" alt="line_kiri" width="150">
-            <button class="font-yellow button-about">See More</button>
+            <a href="{{ route('komiteExhibition') }}"><button class="font-yellow button-about">See More</button></a>
             <img src="{{ asset('images/ObscuraExibition/Frame/line_kanan.png') }}" alt="line_kanan" width="150">
         </div>
     </div>
