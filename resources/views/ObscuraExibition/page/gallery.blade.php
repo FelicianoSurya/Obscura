@@ -33,10 +33,9 @@
         <div class="">
             <div class=" image-position-container container">
                 <div class="image-column">
-                    <img loading="lazy" data-bs-toggle="modal" data-bs-target="#exampleModal" src="https://images.unsplash.com/photo-1646122296818-cfddda505b1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
-                    <img loading="lazy" data-bs-toggle="modal" data-bs-target="#exampleModal1" src="https://images.unsplash.com/photo-1646100960029-967036496807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80" alt="">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1646115578275-d674f7e45500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1646100960029-967036496807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80" alt="">
+                    @foreach($gallery as $data)
+                    <img loading="lazy" data-bs-toggle="modal" data-bs-target="#modal-{{ $data['id'] }}" src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt="">
+                    @endforeach
                 </div>
                 <div class="image-column">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1646100960029-967036496807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80" alt="">
@@ -57,7 +56,8 @@
     </div>
 </div>
 
-<div class="modal fade p-0" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+@foreach($gallery as $data)
+<div class="modal fade p-0" id="modal-{{ $data['id'] }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-5 position-relative">
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -66,12 +66,12 @@
         <img  src="{{ asset('images/ObscuraExibition/Frame/frame_kanan_atas.png') }}" alt="frame_kanan" class="img-right">
         <img  src="{{ asset('images/ObscuraExibition/Frame/frame_kanan_bawah.png') }}" alt="frame_kanan_bawah" class="img-botright">
         <div class="modal-img-container d-flex justify-content-center p-3">
-            <img loading="lazy" data-bs-toggle="modal" data-bs-target="#exampleModal" src="https://images.unsplash.com/photo-1646122296818-cfddda505b1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+            <img loading="lazy" data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{ asset('storage/Images/competition') . '/' . $data['image'] }}" alt="">
         </div>
         <div class="title-content row w-100 justify-content-between mb-3">
             <div class="col-6 d-flex flex-column ">
-                <div class="photo-title">Photo title</div>
-                <div class="photo-name">Photographer name</div>
+                <div class="photo-title">{{ $data['title'] }}</div>
+                <div class="photo-name">{{ $data['name'] }}</div>
 
             </div>
             <div class="col-3 like-button d-flex justify-content-end align-items-center mb-2">
@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="modal-text-container mb-3">
-            Mahasura is Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et 
+            {{ $data['description'] }} 
         </div>
         <div class="row button-container justify-content-center my-5">
             <button class="vote-btn">Vote Now</button>
@@ -88,38 +88,7 @@
     </div>
   </div>
 </div>
-
-<div class="modal fade p-0" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content p-5 position-relative">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        <img  src="{{ asset('images/ObscuraExibition/Frame/frame_kiri_atas.png') }}" alt="frame_kiri" class="img-left">
-        <img  src="{{ asset('images/ObscuraExibition/Frame/frame_kiri_bawah.png') }}" alt="frame_kiri_bawah" class="img-botleft">
-        <img  src="{{ asset('images/ObscuraExibition/Frame/frame_kanan_atas.png') }}" alt="frame_kanan" class="img-right">
-        <img  src="{{ asset('images/ObscuraExibition/Frame/frame_kanan_bawah.png') }}" alt="frame_kanan_bawah" class="img-botright">
-        <div class="modal-img-container d-flex justify-content-center p-3">
-            <img loading="lazy" data-bs-toggle="modal" data-bs-target="#exampleModal" src="https://images.unsplash.com/photo-1646100960029-967036496807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80" alt="">
-        </div>
-        <div class="title-content row w-100 justify-content-between mb-3">
-            <div class="col-6 d-flex flex-column ">
-                <div class="photo-title">Photo title</div>
-                <div class="photo-name">Photographer name</div>
-
-            </div>
-            <div class="col-3 like-button d-flex justify-content-end align-items-center mb-2">
-                <img src="{{ asset('images/ObscuraExibition/Button/like-empty.png') }}" alt="" width="100px">
-                <h4>20 Like</h4>
-            </div>
-        </div>
-        <div class="modal-text-container mb-3">
-            Mahasura is Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et 
-        </div>
-        <div class="row button-container justify-content-center my-5">
-            <button class="vote-btn">Vote Now</button>
-        </div>
-    </div>
-  </div>
-</div>
+@endforeach
 
 @include('ObscuraExibition.template.footer')
 @endsection

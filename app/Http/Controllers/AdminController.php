@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Response;
 class AdminController extends Controller
 {
     public function index(){
-        $gallery = Gallery::paginate(10);
+        $gallery = Gallery::paginate(5);
         return view('ObscuraExibition.admin.adminPanel',[
             'gallery' => $gallery,
         ]);
