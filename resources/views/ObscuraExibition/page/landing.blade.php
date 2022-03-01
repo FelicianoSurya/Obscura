@@ -38,12 +38,9 @@
                 <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide box-image"><img src="https://images.unsplash.com/photo-1646051326596-8ebfbb6f780e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></div>
-                        <div class="swiper-slide box-image"><img src="https://images.unsplash.com/photo-1645991897950-1078bb654f05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt=""></div>
-                        <div class="swiper-slide box-image"></div>
-                        <div class="swiper-slide box-image"></div>
-                        <div class="swiper-slide box-image"></div>
-
+                        @foreach($favourites as $data)
+                        <div class="swiper-slide box-image"><img src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt=""></div>
+                        @endforeach
                     </div>
 
                     <!-- If we need navigation buttons -->

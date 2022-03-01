@@ -24,47 +24,18 @@
             <div class="row w-100 m-3 divisi d-flex justify-content-between align-items-center">
                 <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy">Most Like</button>
                 <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy">Most View</button>
-                <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy">Most Shuffle</button>
-                <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy">Most Newest</button>
-                <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy last">Most Oldest</button>
+                <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy">Shuffle</button>
+                <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy">Newest</button>
+                <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy last">Oldest</button>
             </div>
         </div>
         <div class="gallery container p-3 m-5">
             <div class="row">
+                @foreach($gallery as $data)
                 <div class="col-lg-4 box">
-                    <div class="isi-box"></div>
+                    <div class="isi-box"><img src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt=""></div>
                 </div>
-                <div class="col-lg-4 box">
-                    <div class="isi-box"></div>
-                </div>
-                <div class="col-lg-4 box">
-                    <div class="isi-box"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 box">
-                    <div class="isi-box"></div>
-                </div>
-                <div class="col-lg-3 box">
-                    <div class="isi-box"></div>
-                </div>
-                <div class="col-lg-3 box">
-                    <div class="isi-box"></div>
-                </div>
-                <div class="col-lg-3 box">
-                    <div class="isi-box"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 box">
-                    <div class="isi-box"></div>
-                </div>
-                <div class="col-lg-4 box">
-                    <div class="isi-box"></div>
-                </div>
-                <div class="col-lg-4 box">
-                    <div class="isi-box"></div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

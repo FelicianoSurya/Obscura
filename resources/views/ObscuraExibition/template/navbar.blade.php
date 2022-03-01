@@ -8,7 +8,7 @@
         <div class="d-flex col-9 flex-column ps-2 justify-content-center">
             <p class="text-topic font-yellow font-goudy fs-3 m-0">OBSCURA EXHIBITION</p>
             <p class="text-topic font-yellow font-goudy fs-6 m-0"><i>Gallery</i></p>
-    </div>
+    </div>  
     </div></a>
     </div>    
     <div class="d-flex justify-content-end col-lg-5 col-12 align-items-center btn-regis">
@@ -20,7 +20,10 @@
         <a href="{{ route('register') }}" class="fs-5">Register</a>
         @endif
     @else
-        <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>
+        <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>a
+        @if(Auth::user()->role == 'admin')
+        <a href="{{ route('admin') }}">Admin Panel</a>
+        @endif
         @if(Auth::user()->email_verified_at == NULL)
         <img src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning">
         @endif
@@ -45,10 +48,10 @@
 
 <div class="nav-main d-flex flex-column">
         <div class="nav-menu-container  container">
-            <div class="nav-menu py-2">OBSCURA EXHIBITION</div>
-            <div class="nav-menu py-2">WEEKLY MEETING</div>
-            <div class="nav-menu py-2">GALLERY</div>
-            <div class="nav-menu py-2">ABOUT US</div>
+            <div class="nav-menu py-2 font-yellow"><a href="{{ route('home') }}">Obscura</a></div>
+            <div class="nav-menu py-2 font-yellow"><a href="{{ route('homeExhibition') }}">Home</a></div>
+            <div class="nav-menu py-2 font-yellow"><a href="{{ route('galleryExhibition') }}">Gallery</a></div>
+            <div class="nav-menu py-2 font-yellow"><a href="{{ route('aboutExhibition') }}">About Us</a></div>
         </div>
 </div>
 

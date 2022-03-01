@@ -25,7 +25,6 @@ html{
 
 .section-1{
     height: 40vh;
-    margin-top:140px;
 }
 .font-goudy{
     font-family: goudy  !important;
@@ -75,57 +74,30 @@ html{
     right:0;
 }
 
+.table{
+    z-index: 1000;
+}
+
 .section-2{
-    height: 260vh;
+    margin-top:140px;
+    height: 120vh;
 }
 
-.section-2 .topic{
-    margin-top:100px !important;
+.section-2 .topic p{
+    font-size: 1.5em;
 }
 
-.section-2 input{
-    border-radius: 50px;
-    background-color: #8DC1D3;
-    padding:10px 30px;
+.section-2 .topic a{
+    text-decoration: none;
 }
 
-.section-2 .topic p:nth-child(2){
-    font-size: 1.3em;
-}
-
-.section-2 button{
-    z-index: 99;
-    font-size: 1.2em;
-    padding:15px 40px;
-    background-color: transparent !important;
-    border:none;
-    border-right:1px solid #CCE793;
-    text-align: center;
-}
-
-.section-2 .last{
-    border: none;
+.section-2 .topic a:hover{
+    color:white;
+    transform: scale(1.1);
 }
 
 .frame-size{
     width:300px;
-}
-
-.box{
-    padding:10px;
-}   
-
-.isi-box{
-    height: 250px;
-    border-radius: 10px;
-}
-
-.isi-box img{
-    border-radius: 10px;
-    position: inherit !important;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
 }
 
 .pembatas{
@@ -133,6 +105,52 @@ html{
     bottom:-25px;
     left: center;
 }
+
+.akhir{
+    border-bottom: 2px solid #CCE793;
+}
+
+.modal-header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #372074;
+    background-color: transparent;
+    border-bottom: transparent;
+}
+
+.modal-content{
+    background-color: #0B2A34;
+}
+
+.image-data{
+    position: relative !important;
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.24);
+}
+
+.btn-add{
+    background-color: #CCE793;
+    color:black;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+.modal-dialog {
+    min-width: 30%;
+}
+
+.img-invalid .invalid-feedback{
+    display: inline;
+}
+
 
 @media (max-width:1000px){
     .komite .image-bawah{
@@ -157,19 +175,36 @@ html{
         font-size: 1.5em;
         margin-top: 0px;
     }
+    
+    .section-3_4 .topic p:first-child{
+        font-size: 2em;
+        margin-top:60px;
+    }
+
+    .section-3{
+        height: 100vh;
+    }
+    
+    .section-4{
+        height: 100vh;
+    }
 }
 
-@media (max-width:770px){
-    .section-2 button{
-        border:none;
-        border-bottom:1px solid #CCE793;
-    }
-
-    .section-2 .last{
-        border-bottom: 1px solid #CCE793;
-    }
-
+@media (max-width:700px){
     .section-2{
-        height: 450vh;
+        height: 200vh;
+    }
+    
+    .komite{
+        margin-top:0;
+    }
+
+    .komite .kom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .komite .kom .image-box{
+        margin-top:70px;
     }
 }

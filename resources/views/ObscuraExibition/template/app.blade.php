@@ -7,7 +7,7 @@
     <!-- Page Title -->
     <title>OBSCURA EXHIBITION</title>
     <!-- Obscura Icon -->
-    
+    <link rel="icon" href="{{ asset('images/ObscuraExibition/Logo/logo.png') }}">
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/ObsucraExibition/template/app.css') }}">
 

@@ -136,9 +136,9 @@ html, body {
 }
 
 .nav-main{
-    font-family: tecmono;
+    font-family: Roboto;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     width: 30%;
     background-color: #06161C;
     height: 100%;
@@ -154,6 +154,15 @@ html, body {
 .nav-main.active{
     transform: translateX(0%);
     transition: 0.5s;
+}
+
+.nav-main a{
+    text-decoration: none;
+    color:#CCE793;
+}
+
+.nav-main a:hover{
+    color:white;
 }
 
 .nav-menu-container{

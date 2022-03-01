@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('obscura.page.landing', ['title' => 'OBSCURA']);
-});
+})->name('home');
 
 Route::get('/about-us', function () {
     return view('obscura.page.about', ['title' => 'OBSCURA - ABOUT US']);
@@ -31,9 +33,7 @@ Route::get('/weekly-meeting', [App\Http\Controllers\WeeklyMeeting::class, 'index
 
 
 Route::group(['prefix' => 'obscura-exhibition'], function () {
-	Route::get('/',function(){
-        return view('ObscuraExibition.page.landing',['title' => 'OBSCURA EXHIBITION']);
-    })->name('homeExhibition');
+	Route::get('/', [GalleryController::class, 'index'])->name('homeExhibition');
     
     Route::get('/about-us',function(){
         return view('ObscuraExibition.page.about',['title' => 'ABOUT OBSCURA EXHIBITION']);
@@ -43,8 +43,14 @@ Route::group(['prefix' => 'obscura-exhibition'], function () {
         return view('ObscuraExibition.page.komite',['title' => 'OUR COMMITTEE']);
     })->name('komiteExhibition');
     
-    Route::get('/gallery',function(){
-        return view('ObscuraExibition.page.gallery',['title' => 'GALLERY']);
-    })->name('galleryExhibition');
+    Route::get('/gallery', [GalleryController::class, 'gallery'])->name('galleryExhibition');
+        Route::group(['middleware' => 'admin'],function(){
+            Route::get('/admin-panel', [AdminController::class, 'index'])->name('admin');
+            Route::get('/add-competitor' , [AdminController::class, 'view'])->name('page-add-competitor');
+            Route::post('/add-competitor/add' , [AdminController::class, 'store']);
+            Route::get('/edit-competitor/{id}', [AdminController::class, 'detail'])->name('edit-competitor');
+            Route::post('/edit-competitor/edit', [AdminController::class, 'edit']);
+            Route::get('/delete-competitor/{id}', [AdminController::class, 'destroy']);
+        });
 });
 
