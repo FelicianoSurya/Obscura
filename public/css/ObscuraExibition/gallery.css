@@ -135,45 +135,7 @@ html{
     left: center;
 }
 
-.image-position-container{
-    grid-column-gap: 24px;
-    align-items: start;
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-}
 
-.image-column {
-    display: grid;
-    grid-template-columns: minmax(0,1fr);
-    row-gap: 24px;
-}
-
-.box{
-    width: 100%;
-}
-
-.box img{
-    position: relative!important;
-    width: 100%;
-    height: 300px;
-    border-radius: 25px;
-    transition: 0.2s;
-
-}
-
-
-.image-column img:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.image-container-gallery{
-    max-height: 300px;
-    overflow: hidden;
-    border-radius: 25px;
-}
 
 .modal{
     overflow-y: visible!important;
@@ -299,6 +261,30 @@ color: #FFFFFF;
     position: absolute;
     z-index: 5;
     transform: translate(-50%, -50%);
+}
+
+.image-position-container .box{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-position-container .box:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.image-position-container .box img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 @media (max-width:1000px){

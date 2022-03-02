@@ -30,8 +30,8 @@
                 <button class="col-lg-2 col-md-2 col-12 font-yellow font-goudy last">Oldest</button>
             </div>
         </div>
-        <div class="">
-            <div class=" image-position-container container">
+        <div class="container w-100">
+            <div class=" image-position-container row justify-content-center">
                 <!-- <div class="image-column">
                     @foreach($gallery as $data)
                     <input type="hidden" id="id-gallery" value="{{ $data['id'] }}">
@@ -40,9 +40,12 @@
                     @endauth
                     <img loading="lazy" class="modal-image" data-bs-toggle="modal" data-bs-target="#modal-{{ $data['id'] }}" src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt="">
                     @endforeach
+
+                    
                 </div> -->
+
                 @foreach($gallery as $data)
-                <div class="col-lg-4 box">
+                <div class="col-lg-3 box">
                     <input type="hidden" id="id-gallery" value="{{ $data['id'] }}">
                     @auth
                     <input type="hidden" id="id-user" value="{{ Auth::user()->id }}">
