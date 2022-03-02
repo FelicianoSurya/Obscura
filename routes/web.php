@@ -54,3 +54,11 @@ Route::group(['prefix' => 'obscura-exhibition'], function () {
         });
 });
 
+Route::group(['middleware' => 'auth'],function(){
+    Route::post('/knowLike', [GalleryController::class, 'knowLike']);
+    Route::post('/addLike', [GalleryController::class, 'addLike']);
+    Route::post('/deleteLike', [GalleryController::class, 'deleteLike']);
+});
+
+Route::post('/getLike', [GalleryController::class, 'getLike']);
+Route::post('/getViews', [GalleryController::class, 'getViews']);

@@ -32,25 +32,24 @@
         </div>
         <div class="">
             <div class=" image-position-container container">
-                <div class="image-column">
+                <!-- <div class="image-column">
                     @foreach($gallery as $data)
-                    <img loading="lazy" data-bs-toggle="modal" data-bs-target="#modal-{{ $data['id'] }}" src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt="">
+                    <input type="hidden" id="id-gallery" value="{{ $data['id'] }}">
+                    @auth
+                    <input type="hidden" id="id-user" value="{{ Auth::user()->id }}">
+                    @endauth
+                    <img loading="lazy" class="modal-image" data-bs-toggle="modal" data-bs-target="#modal-{{ $data['id'] }}" src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt="">
                     @endforeach
-                </div>
-                <div class="image-column">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1646100960029-967036496807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=856&q=80" alt="">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1646115578275-d674f7e45500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1646115578275-d674f7e45500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
-                </div>
-                <div class="image-column">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1638913658179-18c9a9c943f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">   
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1646115578275-d674f7e45500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
-                </div>
-                <!-- @foreach($gallery as $data)
+                </div> -->
+                @foreach($gallery as $data)
                 <div class="col-lg-4 box">
-                    <div class="isi-box"><img src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt=""></div>
+                    <input type="hidden" id="id-gallery" value="{{ $data['id'] }}">
+                    @auth
+                    <input type="hidden" id="id-user" value="{{ Auth::user()->id }}">
+                    @endauth     
+                    <img loading="lazy" class="modal-image" data-bs-toggle="modal" data-bs-target="#modal-{{ $data['id'] }}" src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt="">
                 </div>
-                @endforeach -->
+                @endforeach
             </div>
         </div>
     </div>
@@ -75,8 +74,13 @@
 
             </div>
             <div class="col-3 like-button d-flex justify-content-end align-items-center mb-2">
-                <img src="{{ asset('images/ObscuraExibition/Button/like-empty.png') }}" alt="" width="100px">
-                <h4>20 Like</h4>
+                <input type="hidden" id="gallery-id" value="{{ $data['id'] }}">
+                @auth
+                <input type="hidden" id="user-id" value="{{ Auth::user()->id }}">
+                <img class="like_full" src="{{ asset('images/ObscuraExibition/Button/like_full.png') }}" alt="" width="100px">
+                @endauth
+                <img class="like_empty" src="{{ asset('images/ObscuraExibition/Button/like-empty.png') }}" alt="" width="100px">
+                <h4 class="like"></h4><h4 class="ps-1">Like</h4>
             </div>
         </div>
         <div class="modal-text-container mb-3">
@@ -99,6 +103,100 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
+        $(document).ready(function(){
+            $(".modal-image").click(function(e){
+                let galleryID = $(this).closest(".box").children("#id-gallery").val();
+                let _token   = $('meta[name="csrf-token"]').attr('content');
+                $.ajax({
+                    url : '/getLike',
+                    method : 'POST',
+                    data : {
+                        galleryID : galleryID,
+                        _token : _token
+                    },
+                    success : function(result){
+                        $(".like").html(result.like);
+                    }
+                })
+            });
+            $(".modal-image").click(function(e){
+                let galleryID = $(this).closest(".box").children("#id-gallery").val();
+                let _token   = $('meta[name="csrf-token"]').attr('content');
+                $.ajax({
+                    url : '/getViews',
+                    method : 'POST',
+                    data : {
+                        galleryID : galleryID,
+                        _token : _token
+                    },
+                });
+            });
+            $(".modal-image").click(function(e){
+                let userID = $(this).closest(".box").children("#id-user").val();
+                let galleryID = $(this).closest(".box").children("#id-gallery").val();
+                let _token   = $('meta[name="csrf-token"]').attr('content');
+                $.ajax({
+                    url : '/knowLike',
+                    method : 'POST',
+                    data : {
+                        userID : userID,
+                        galleryID : galleryID,
+                        _token : _token
+                    },
+                    success : function(result){
+                        if(result.data > 0){
+                            $(".like_empty").hide();
+                            $('.like_full').show();
+                        }else{
+                            $(".like_full").hide();
+                            $(".like_empty").show();
+                        }
+                    },
+                });
+            });
+            $(".like_empty").click(function(e){
+                let userID = $(this).closest(".like-button").children("#user-id").val();
+                let galleryID = $(this).closest(".like-button").children("#gallery-id").val();
+                let _token   = $('meta[name="csrf-token"]').attr('content');
+                $.ajax({
+                    url : '/addLike',
+                    method : 'POST',
+                    data : {
+                        userID : userID,
+                        galleryID : galleryID,
+                        _token : _token
+                    },
+                    success : function(result){
+                        $(".like").html(result.like);
+                        $(".like_empty").hide();
+                        $('.like_full').show();
+                    },
+                    error: function () {
+                        alert('silahkan login terlebih dahulu');
+                    }
+                });
+            });
+            $(".like_full").click(function(e){
+                let userID = $(this).closest(".like-button").children("#user-id").val();
+                let galleryID = $(this).closest(".like-button").children("#gallery-id").val();
+                let _token   = $('meta[name="csrf-token"]').attr('content');
+                $.ajax({
+                    url : '/deleteLike',
+                    method : 'POST',
+                    data : {
+                        userID : userID,
+                        galleryID : galleryID,
+                        _token : _token
+                    },
+                    success : function(result){
+                        $(".like").html(result.like);
+                        $(".like_full").hide();
+                        $(".like_empty").show();
+                    },
+                });
+                setTimeout(function() {},1000);
+            });
+        });
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             direction: 'vertical',

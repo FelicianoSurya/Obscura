@@ -18,6 +18,7 @@ class CreateLikesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
+            $table->primary(array('gallery_id','user_id'));
             $table->foreign('gallery_id')->references('id')->on('gallery');
             $table->foreign('user_id')->references('id')->on('users');
         });
