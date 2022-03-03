@@ -19,15 +19,15 @@ class GallerySeeder extends Seeder
                 'name' => 'Kevin',
                 'title' => 'Pemandangan Alam',
                 'description' => 'If you\'re over eighteen, adult gymnastics provides...',
-                'views' => 0,
-                'image' => 'love.png',
+                'views' => 10,
+                'image' => 'africa.jfif',
             ],
             [
                 'name' => 'Feliciano',
                 'title' => 'Logo indah',
                 'description' => 'Pokoknya keren banget',
-                'views' => 0,
-                'image' => 'ttd1.jpg',
+                'views' => 50,
+                'image' => 'image1.jfif',
             ],
         ];
 

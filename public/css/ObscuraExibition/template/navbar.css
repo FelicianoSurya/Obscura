@@ -197,3 +197,13 @@ html, body {
         
     }
 }
+
+@media(max-width:400px){
+    .logo{
+        display: none;
+    }
+
+    .text-topic{
+        padding-left: 10px;
+    }
+}

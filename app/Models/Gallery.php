@@ -17,4 +17,12 @@ class Gallery extends Model
         'image',
         'views',
     ];
+
+    public function like(){
+        return $this->hasMany(Likes::class, 'gallery_id' , 'id');
+    }
+
+    public function vote(){
+        return $this->hasMany(Vote::class, 'gallery_id','id');
+    }
 }

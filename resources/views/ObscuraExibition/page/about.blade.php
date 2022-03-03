@@ -14,8 +14,8 @@
             <img src="{{ asset('images/ObscuraExibition/Frame/frame_kiri_bawah.png') }}" alt="frame_kiri_bawah" width="20%">
             <img src="{{ asset('images/ObscuraExibition/Frame/frame_kanan_atas.png') }}" alt="frame_kanan" width="20%">
             <img src="{{ asset('images/ObscuraExibition/Frame/frame_kanan_bawah.png') }}" alt="frame_kanan_bawah" width="20%">
-            <img src="{{ asset('images/ObscuraExibition/Frame/pembatas_atas.png') }}" alt="frame_kanan_bawah" width="40%">
-            <img src="{{ asset('images/ObscuraExibition/Frame/pembatas_atas.png') }}" alt="pembatas-bawah" width="40%">
+            <!-- <img src="{{ asset('images/ObscuraExibition/Frame/pembatas_atas.png') }}" alt="frame_kanan_bawah" width="40%"> -->
+            <!-- <img src="{{ asset('images/ObscuraExibition/Frame/pembatas_atas.png') }}" alt="pembatas-bawah" width="40%"> -->
             <div class="topic row d-flex w-100 p-lg-5">
                 <div class="judul col-lg-7 col-12 p-0">
                     <p>OBSCURA</p>

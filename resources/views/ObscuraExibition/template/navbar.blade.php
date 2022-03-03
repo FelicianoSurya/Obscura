@@ -1,23 +1,23 @@
 <nav class="mb-5 p-4 navbar navbar-expand-md navbar-fixed-top">
-    
-    <a href="{{ route('homeExhibition') }}"><div class="d-flex px-4 col-lg-5 col-12 align-items-center">
-    <div class="row">
+<div class="row w-100">
+    <div class="d-flex px-lg-4 px-0 col-lg-5 col-11 align-items-center">
+    <a href="{{ route('homeExhibition') }}"><div class="row">
         <div class="logo col-3">
             <img src="{{ asset('images/ObscuraExibition/Logo/Logo.png') }}" alt="logo" width="100">
         </div>
         <div class="d-flex col-9 flex-column ps-2 justify-content-center">
             <p class="text-topic font-yellow font-goudy fs-3 m-0">OBSCURA EXHIBITION</p>
             <p class="text-topic font-yellow font-goudy fs-6 m-0"><i>Gallery</i></p>
-    </div>  
+        </div>  
     </div></a>
     </div>    
-    <div class="d-flex justify-content-end col-lg-5 col-12 align-items-center btn-regis">
+    <div class="d-flex flex-column flex-lg-row justify-content-lg-end justify-content-md-center col-lg-5 col-md-12 col-12 align-items-center btn-regis">
     @guest
         @if (Route::has('login'))
         <a href="{{ route('login') }}" class="fs-5">Log in</a>
         @endif
         @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="fs-5">Register</a>
+        <a href="{{ route('register') }}" class="fs-5 mt-lg-0 mt-3">Register</a>
         @endif
     @else
         <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>a
@@ -27,7 +27,7 @@
         @if(Auth::user()->email_verified_at == NULL)
         <img src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning">
         @endif
-        <a href="{{ route('logout') }}"
+        <a class="mt-lg-0 mt-3" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
@@ -37,6 +37,7 @@
         </form>
     </div>
 @endguest
+</div>
 </nav>
 
 <div id="nav-icon3">
@@ -52,6 +53,7 @@
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('homeExhibition') }}">Home</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('galleryExhibition') }}">Gallery</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('aboutExhibition') }}">About Us</a></div>
+            <div class="nav-menu py-2 font-yellow"><a href="{{ route('komiteExhibition') }}">Committee</a></div>
         </div>
 </div>
 

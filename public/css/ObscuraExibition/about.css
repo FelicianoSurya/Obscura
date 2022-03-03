@@ -27,6 +27,7 @@ html{
     margin-top:140px;
     background-color:#0B2A34;
 }
+
 .font-goudy{
     font-family: goudy  !important;
 }
@@ -301,7 +302,9 @@ html{
         background-color: black;
         overflow: hidden;
     }
-    
+    .section-1{
+        margin-top:300px;
+    }
 }
 
 @media (max-width : 1000px){
@@ -377,4 +380,18 @@ html{
         height: 100vh;
     }
 
+}
+
+@media (max-width:450px){
+    .section-2{
+        height: 80vh;
+    }
+
+    .section-2 .topic p:first-child{
+        font-size: 1.5em;
+    }
+
+    .section-3{
+        height: 80vh;
+    }
 }

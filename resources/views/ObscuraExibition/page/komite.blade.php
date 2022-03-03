@@ -39,7 +39,7 @@
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
             </div>
-            <div class="kom kom container d-flex justify-content-around align-items-cente0 m-lg-5 m-0 m-lg-5 image-bawah">
+            <div class="kom kom container d-flex justify-content-around align-items-center 0 m-lg-5 m-0 m-lg-5 image-bawah">
                 <div class="image-box">
                     <div class="image"></div>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">

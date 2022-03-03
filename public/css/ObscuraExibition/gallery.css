@@ -183,6 +183,10 @@ html{
     width: 200px;
     z-index: 1;
 }
+.like-button img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 .modal-content .img-botleft {
     position: absolute!important;
@@ -223,6 +227,18 @@ html{
     padding: 10px 30px;
     color: #FFFFFF;
     transition: 0.2s;
+}
+
+.voted{
+    background-color:#B6D794 !important;
+    color:#0A2F3E;
+    text-shadow: none;
+}
+
+.voted:hover{
+    background-color:#0A2F3E !important;
+    color:#BBDF95 !important;
+    text-shadow: none;
 }
 
 .vote-btn:hover{
@@ -291,6 +307,10 @@ color: #FFFFFF;
     .komite .image-bawah{
         padding: 0px 100px;
     }
+    
+    .section-1{
+        margin-top:300px !important;
+    }
 }
 
 @media (max-width:900px){
@@ -310,6 +330,7 @@ color: #FFFFFF;
         font-size: 1.5em;
         margin-top: 0px;
     }
+
 }
 
 @media (max-width:770px){
@@ -321,8 +342,11 @@ color: #FFFFFF;
     .section-2 .last{
         border-bottom: 1px solid #CCE793;
     }
+}
 
-    .section-2{
-        height: 450vh;
+@media (max-width:500px){
+    .modal .photo-title{
+        font-size: 40px;
     }
+    
 }

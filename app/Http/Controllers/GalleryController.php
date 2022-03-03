@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\Gallery;
 use App\Models\Likes;
+use App\Models\Vote;
 
 class GalleryController extends Controller
 {
@@ -19,12 +20,36 @@ class GalleryController extends Controller
     }
 
     public function gallery(){
-        $galleries = Gallery::all();
+        $galleries = Gallery::with(['like','vote'])->get();
+        $galleryLike = Gallery::withCount('like')->orderBy('like_count','desc')->get();
+        $galleryView = Gallery::orderBy('views','desc')->get();
+        $galleryShuffle = Gallery::inRandomOrder()->get();
+        $galleryNewest = Gallery::orderBy('created_at','desc')->get();
+        $galleryOldest = Gallery::orderBy('created_at','asc')->get();
+
+
 
         return view('ObscuraExibition.page.gallery',[
             'title' => 'GALLERY EXHIBITION',
             'gallery' => $galleries,
+            'galleryLike' => $galleryLike,
+            'galleryView' => $galleryView,
+            'galleryShuffle' => $galleryShuffle,
+            'galleryNewest' => $galleryNewest,
+            'galleryOldest' => $galleryOldest,
         ]);
+    }
+
+    public function filter(Request $request){
+        $galleries = Gallery::withCount('like')->orderBy('like_count','desc')->get();
+        $req = $request['type'];
+
+        if($req == 'like'){
+            return view('ObscuraExhibition.page.gallery',[
+                'gallery' => $galleries,
+            ]);
+        }
+
     }
 
     public function getLike(Request $request){
@@ -97,5 +122,34 @@ class GalleryController extends Controller
         ];
 
         return response()->json($params);
+    }
+
+    public function knowVote(Request $request){
+        $userID = $request['userID'];
+        $galleryID = $request['galleryID'];
+
+        $vote = Vote::where('user_id',$userID)->where('gallery_id',$galleryID)->get();
+        $count = count($vote);
+
+        $params = [
+            'data' => $count,
+        ];
+
+        return response()->json($params);
+    }
+
+    public function addVote(Request $request){
+        $userID = $request['userID'];
+        $galleryID = $request['galleryID'];
+        $vote = Vote::where('user_id',$userID)->get();
+        
+        if($vote){
+            Vote::where('user_id',$userID)->update(['gallery_id' => $galleryID]);
+        }else{
+            Vote::create([
+                'user_id' => $userID,
+                'gallery_id' => $galleryID
+            ]);
+        }
     }
 }

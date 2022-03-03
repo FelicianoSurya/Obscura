@@ -29,6 +29,13 @@ class UserSeeder extends Seeder
                 'role' => 'user',
                 'email_verified_at' => '2022-02-28 19:35:15',
             ],
+            [
+                'email' => 'lifos@gmail.com',
+                'name' => 'Lifos',
+                'password' => bcrypt('lifos123'),
+                'role' => 'user',
+                'email_verified_at' => '2022-02-28 19:35:15',
+            ],
         ];
 
         foreach($users as $user => $value){
