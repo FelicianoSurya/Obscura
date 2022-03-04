@@ -25,7 +25,7 @@
         <a href="{{ route('admin') }}">Admin Panel</a>
         @endif
         @if(Auth::user()->email_verified_at == NULL)
-        <img src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning">
+        <a href="{{ url('email/verify') }}">Not Verified<img class="ms-1" src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning"></a>
         @endif
         <a class="mt-lg-0 mt-3" href="{{ route('logout') }}"
             onclick="event.preventDefault();
@@ -54,7 +54,7 @@
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('galleryExhibition') }}">Gallery</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('aboutExhibition') }}">About Us</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('komiteExhibition') }}">Committee</a></div>
-
+            <div class="ps-5 pt-3">
             @guest
                 @if (Route::has('login'))
                 <a href="{{ route('login') }}" class=""><div class="nav-menu d-lg-none d-block sign-button mt-3 text-center"> Log in </div></a>
@@ -63,13 +63,15 @@
                 <a href="{{ route('register') }}" class=""><div class="nav-menu d-lg-none d-block sign-button mt-3 text-center">Register </div></a>
                 @endif
             @else
-                <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>a
-                @if(Auth::user()->role == 'admin')
-                <a href="{{ route('admin') }}">Admin Panel</a>
-                @endif
-                @if(Auth::user()->email_verified_at == NULL)
-                <img src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning">
-                @endif
+                <div class="d-flex">
+                    <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>
+                    @if(Auth::user()->role == 'admin')
+                    <a href="{{ route('admin') }}">Admin Panel</a>
+                    @endif
+                    @if(Auth::user()->email_verified_at == NULL)
+                    <a href="{{ url('email/verify') }}"><img class="ms-1" src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning"></a>
+                    @endif
+                </div>
                 <a class="mt-lg-0 mt-3" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
@@ -79,7 +81,7 @@
                     @csrf
                 </form>
             @endguest
-
+            </div>
         </div>
 </div>
 

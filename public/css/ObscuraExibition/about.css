@@ -302,9 +302,6 @@ html{
         background-color: black;
         overflow: hidden;
     }
-    .section-1{
-        margin-top:300px;
-    }
 }
 
 @media (max-width : 1000px){

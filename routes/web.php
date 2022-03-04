@@ -54,14 +54,14 @@ Route::group(['prefix' => 'obscura-exhibition'], function () {
         });
 });
 
-Route::group(['middleware' => 'auth'],function(){
-    Route::post('/knowLike', [GalleryController::class, 'knowLike']);
+Route::group(['middleware' => ['auth','verified']],function(){
     Route::post('/addLike', [GalleryController::class, 'addLike']);
     Route::post('/deleteLike', [GalleryController::class, 'deleteLike']);
-    Route::post('/knowVote', [GalleryController::class, 'knowVote']);
     Route::post('/addVote', [GalleryController::class, 'addVote']);
 });
 
+Route::post('/knowLike', [GalleryController::class, 'knowLike']);
+Route::post('/knowVote', [GalleryController::class, 'knowVote']);
 Route::post('/getLike', [GalleryController::class, 'getLike']);
 Route::get('/obscura-exhibition/gallery/like', [GalleryController::class, 'filter']);
 Route::post('/getViews', [GalleryController::class, 'getViews']);

@@ -151,6 +151,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="{{ asset('js/sweetalert/sweetalert.js') }}"></script>
     <script>
         $(document).ready(function(){
             $('#all').show();
@@ -289,8 +290,20 @@
                         $(".like_empty").hide();
                         $('.like_full').show();
                     },
-                    error: function () {
-                        alert('silahkan login terlebih dahulu');
+                    error: function (xhr) {
+                        if(xhr.responseJSON.message == 'Your email address is not verified.'){
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'NOT VERIFIED',
+                            text: xhr.responseJSON.message + "!", 
+                            });
+                        }else{
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'LOGIN FIRST',
+                            text: "Please login first!", 
+                            });
+                        }
                     }
                 });
             });
@@ -332,8 +345,20 @@
                         $(".now").hide();
                         $(".voted").show();
                     },
-                    error : function(request){
-                        alert(request.responseText);
+                    error : function(xhr){
+                        if(xhr.responseJSON.message == 'Your email address is not verified.'){
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'NOT VERIFIED',
+                            text: xhr.responseJSON.message + "!", 
+                        });
+                        }else{
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'LOGIN FIRST',
+                            text: "Please login first!", 
+                        });
+                        }
                     }
                 });
                 setTimeout(function() {},1000);

@@ -292,21 +292,21 @@ html{
     }
 
     .section-3{
-        height: 80vh;
+        height: 100vh;
     }
     
     .section-4{
-        height: 80vh;
+        height: 100vh;
     }
     
     .section-2{
-        height: 90vh !important;
+        height: 110vh !important;
     }
 
 }
 
 @media(max-width:400px){
     .section-2{
-        height: 90vh !important;
+        height: 110vh !important;
     }
 }

@@ -34,7 +34,14 @@ class UserSeeder extends Seeder
                 'name' => 'Lifos',
                 'password' => bcrypt('lifos123'),
                 'role' => 'user',
-                'email_verified_at' => '2022-02-28 19:35:15',
+                'email_verified_at' => '2022-02-28 19:25:25',
+            ],
+            [
+                'email' => 'daniel@gmail.com',
+                'name' => 'Daniel',
+                'password' => bcrypt('daniel123'),
+                'role' => 'user',
+                'email_verified_at' => NULL,
             ],
         ];
 

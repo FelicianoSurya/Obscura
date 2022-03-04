@@ -307,10 +307,6 @@ color: #FFFFFF;
     .komite .image-bawah{
         padding: 0px 100px;
     }
-    
-    .section-1{
-        margin-top:300px !important;
-    }
 }
 
 @media (max-width:900px){
