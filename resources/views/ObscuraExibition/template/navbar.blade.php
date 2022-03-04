@@ -11,13 +11,13 @@
         </div>  
     </div></a>
     </div>    
-    <div class="d-flex flex-column flex-lg-row justify-content-lg-end justify-content-md-center col-lg-5 col-md-12 col-12 align-items-center btn-regis">
+    <div class=" m-0 flex-column flex-lg-row justify-content-lg-end justify-content-md-center col-lg-6 d-lg-flex d-none align-items-center btn-regis">
     @guest
         @if (Route::has('login'))
-        <a href="{{ route('login') }}" class="fs-5">Log in</a>
+        <a href="{{ route('login') }}" class="fs-6">Log in</a>
         @endif
         @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="fs-5 mt-lg-0 mt-3">Register</a>
+        <a href="{{ route('register') }}" class="fs-6 ">Register</a>
         @endif
     @else
         <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>a
@@ -36,7 +36,7 @@
             @csrf
         </form>
     </div>
-@endguest
+    @endguest
 </div>
 </nav>
 
@@ -54,6 +54,32 @@
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('galleryExhibition') }}">Gallery</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('aboutExhibition') }}">About Us</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('komiteExhibition') }}">Committee</a></div>
+
+            @guest
+                @if (Route::has('login'))
+                <a href="{{ route('login') }}" class=""><div class="nav-menu d-lg-none d-block sign-button mt-3 text-center"> Log in </div></a>
+                @endif
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class=""><div class="nav-menu d-lg-none d-block sign-button mt-3 text-center">Register </div></a>
+                @endif
+            @else
+                <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>a
+                @if(Auth::user()->role == 'admin')
+                <a href="{{ route('admin') }}">Admin Panel</a>
+                @endif
+                @if(Auth::user()->email_verified_at == NULL)
+                <img src="{{ asset('images/ObscuraExibition/warning.png') }}" width="20" height="20" alt="warning">
+                @endif
+                <a class="mt-lg-0 mt-3" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            @endguest
+
         </div>
 </div>
 

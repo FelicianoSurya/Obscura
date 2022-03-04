@@ -185,6 +185,32 @@ html, body {
     text-decoration:none;
 }
 
+.sign-button{
+    background-color: #B6D794;
+    border-radius: 50px;
+    color:black!important;
+    text-decoration:none;
+    font-family: Roboto;
+    padding:10px 50px;
+    transition: 0.4s;
+}
+
+.sign-button a{
+    transition: 0.4s;
+    color:black!important;
+}
+
+.sign-button:hover{
+    background-color: #113642;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.sign-button:hover a{
+    transition: 0.4s;
+    color:#B6D794!important;
+}
+
 @media (max-width:850px){
     .nav-menu{
         width: 100%;
