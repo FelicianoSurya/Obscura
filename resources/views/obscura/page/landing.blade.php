@@ -17,7 +17,7 @@
                 <h2>TO OBSCURA</h2>
             </div>
             <div class="line-asset d-flex justify-content-center">
-                <img src="{{ asset('images/home/HOME_Line.png') }}" alt="" width="70%">
+                <img src="{{ asset('images/home/HOME_Line.png') }}" alt="" width="65%">
             </div>
             <div class="button-asset d-flex justify-content-center mb-3">
                 <img src="{{ asset('images/home/HOME_Button_Explore Us.png') }}" width="50%" alt="">
@@ -30,6 +30,7 @@
     </div>
     <div class="main-section position-relative">
         <img src="{{ asset('images/home/gallery/teks.png') }}" class="position-absolute obscura-gallery" alt="">
+        <img src="{{ asset('images/home/gallery/button.png') }}" class="position-absolute obscura-gallery-button" alt="">
 
         <div class="section-2 d-flex flex-column justify-content-center align-items-center pt-5 container">
             <div class="content d-flex align-items-center row">
@@ -40,7 +41,7 @@
                         <span class="reverse"><img src="{{ asset('images/home/BUTTON SEGITIGA.png') }}" alt=""></span>
                     </div>
                     <div class="col-lg-7 col-12 d-flex flex-column align-items-center">
-                        <div class="d-flex justify-content-between align-items-end">
+                        <div class="d-flex justify-content-start align-items-end">
                             <img src="{{ asset('images/home/exibition/OBS EXHI_TEKS_Obscura Exhibition.png') }}" width="70%" alt="">
                             <img src="{{ asset('images/home/exibition/OBS EXHI_ASET_2022.png') }}" class="image-year" alt="">
                         </div>
@@ -61,7 +62,7 @@
         <div class="section-3 container d-flex align-items-start pt-5 justify-content-center">
             <div class="row justify-content-center align-items-center position-relative">
 
-                    <div class="title-section-3 col-6 d-flex justify-content-center">
+                    <div class="title-section-3 col-8 d-flex justify-content-center">
                         <img src="{{ asset('images/home/meeting/text-week.png') }}" class="w-100"alt="">
                     </div>
                     <!-- Slider main container -->

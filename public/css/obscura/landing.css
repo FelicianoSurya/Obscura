@@ -56,14 +56,11 @@ html{
     background-size: cover;
     background-position: center;
     background-image:  url('../../images/home/bg-2.jpg');
-    min-height: 330vh;
-    max-height: 330vh;
+    height: 2471px;
 }
 
 .section-2{
-    min-height: 110vh;
-    max-height: 110vh;
-    padding:0px 200px;
+    height: 823px;
 }
 
 .section-2 .image-year{
@@ -99,13 +96,11 @@ html{
 }
 
 .section-3{
-    min-height: 110vh;
-    max-height: 110vh;
+    height: 823px;
 }
 
 .section-4{
-    min-height: 110vh;
-    max-height: 110vh;
+    height: 823px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -219,7 +214,7 @@ html{
 .obscura-gallery{
     bottom: 0;
     left: 50%;
-    transform: translate(-60%, -45%);
+    transform: translate(-60%, -120%);
     width: 500px;
 }
 
@@ -234,10 +229,31 @@ html{
     width: 50%;
 }
 
-@media (max-width:1290px){
+.obscura-gallery-button{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-60%, -140%);
+    width: 300px;
+}
+
+@media (max-width:1025px){
+    .main-section{
+        height: 1820px;
+
+    }
+    .obscura-gallery-button{
+        bottom: 0;
+        left: 50%;
+        transform: translate(-60%, -150%);
+        width: 200px;
+    }
+    .section-2,.section-3,.section-4{
+        height: 607px;
+
+    }
     .obscura-gallery{
-        transform: translate(-60%, -100%);
-        width: 470px;
+        transform: translate(-60%, -110%);
+        width: 380px;
     }
 }
 
