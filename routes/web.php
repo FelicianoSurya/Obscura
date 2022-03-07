@@ -17,7 +17,7 @@ use App\Http\Controllers\GalleryController;
 
 Route::get('/', function () {
     return view('obscura.page.landing', ['title' => 'OBSCURA']);
-})->name('home');
+})->name('homeall');
 
 Route::get('/about-us', function () {
     return view('obscura.page.about', ['title' => 'OBSCURA - ABOUT US']);

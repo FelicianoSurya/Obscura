@@ -49,7 +49,7 @@
 
 <div class="nav-main d-flex flex-column">
         <div class="nav-menu-container  container">
-            <div class="nav-menu py-2 font-yellow"><a href="{{ route('home') }}">Obscura</a></div>
+            <div class="nav-menu py-2 font-yellow"><a href="{{ route('homeall') }}">Obscura</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('homeExhibition') }}">Home</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('galleryExhibition') }}">Gallery</a></div>
             <div class="nav-menu py-2 font-yellow"><a href="{{ route('aboutExhibition') }}">About Us</a></div>
