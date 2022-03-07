@@ -117,7 +117,18 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="{{ asset('js/sweetalert/sweetalert.js') }}"></script>
     <script>
-        
+        $(document).ready(function() {
+            $('#panel1').hide();
+            $('#panel').show();
+            $('#ranking').click(function(){
+                $('#panel1').show();
+                $('#panel').hide();
+            });
+            $('#default').click(function(){
+                $('#panel').show();
+                $('#panel1').hide();
+            });
+        });
         @if($status = Session::get('success'))
             $(document).ready(function() {
                 Swal.fire({
@@ -142,19 +153,6 @@
                 text: "Data Berhasil Dihapus!", 
             });
         });
-        @else
-            $(document).ready(function() {
-                $('#panel1').hide();
-                $('#panel').show();
-                $('#ranking').click(function(){
-                    $('#panel1').show();
-                    $('#panel').hide();
-                });
-                $('#default').click(function(){
-                    $('#panel').show();
-                    $('#panel1').hide();
-                });
-            });
         @endif
     </script>
 @endsection

@@ -38,11 +38,11 @@
                 <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide box-image" style="background-image:url('https://images.unsplash.com/photo-1644982652061-df82282e178d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')"><img class="w-100"src="{{ asset('images/ObscuraExibition/Frame/twibon.png') }}" alt=""></div>
-
                         @foreach($favourites as $data)
+                        <div class="swiper-slide box-image" style="background-image:url({{ asset('storage/images/competition/' . '/' . $data['image']) }})"><img loading="lazy" class="w-100"src="{{ asset('images/ObscuraExibition/Frame/twibon.png') }}" alt=""></div>
 
-                        <div class="swiper-slide box-image"><img src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt=""></div>
+
+                        <!-- <div class="swiper-slide box-image"><img src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt=""></div> -->
                         @endforeach
                     </div>
 
