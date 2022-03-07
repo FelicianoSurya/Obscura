@@ -19,7 +19,7 @@ html{
 
 .section{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -76,7 +76,7 @@ html{
 }
 
 .section-2{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section-2 .topic p:first-child{
@@ -127,8 +127,7 @@ html{
 
 .image-box{
     position: relative;
-    width: 200px;
-    height: 200px;
+
 }
 
 .image-box .image{
@@ -148,7 +147,7 @@ html{
 .komite img{
     position: absolute;
     left: center;
-    bottom:-30px !important;
+    bottom: 110px !important;;
 }
 
 .komite .image-bawah{
@@ -198,29 +197,29 @@ html{
     }
 
     .section-3{
-        height: 100vh;
+        min-height: 100vh;
     }
     
     .section-4{
-        height: 100vh;
+        min-height: 100vh;
     }
 }
 
 @media (max-width:700px){
     .section-2{
-        height: 210vh;
+        min-height: 100vh;
     }
 
     .people-3{
-        height: 150vh !important;
+        min-height: 150vh !important;
     }
 
     .people-6{
-        height: 250vh !important;
+        min-height: 250vh !important;
     }
 
     .people-8{
-        height: 300vh !important;
+        min-height: 300vh !important;
     }
     
     .komite{
@@ -238,5 +237,7 @@ html{
 
     .komite .kom .image-box{
         margin-top:70px;
+        margin-bottom:70px;
+
     }
 }

@@ -224,15 +224,18 @@ html{
 }
 
 .swiper{
-    width: 700px;
+    width: 500px;
     height: 400px;
     overflow: visible!important;
 }
 
 .section-2 .box-image{
-    width: 600px;
-    height: 400px;
+    width: 500px;
+    height: 374px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .section-2 .box-image img{
