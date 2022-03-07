@@ -455,52 +455,52 @@
             <div class="kom container d-flex justify-content-around align-items-center">
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Alden.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Alden Jonathan</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Alyssa.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Alyssa Salsabila Radyasinta Taufiq</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Axel.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Axel Andrean Handoko</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Daniel.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Daniel Kurniawan</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
             </div>
             <div class="kom mt-5 container d-flex justify-content-around align-items-center">
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Florencia.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Florencia Irene</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_KristaCeline.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Krista Celine</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Valdo.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Trivaldo Agatha</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p Agatha>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
                 <div class="image-box">
                     <div class="image"><img src="{{ asset('images/ObscuraExibition/komite/LINTANG/Lintang_Vania.png') }}" alt=""></div>
-                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Feliciano</p>
-                    <p  class="text-center font-yellow font-goudy mb-5">Ketua</p>
+                    <p class="text-center mb-0 font-yellow font-goudy mt-5">Vania Amadea Josephine</p>
+                    <p  class="text-center font-yellow font-goudy mb-5">Supervisi</p>
                     <img src="{{ asset('images/ObscuraExibition/Frame/profile_frame.png') }}" alt="profile_frame" width="200">
                 </div>
             </div>
