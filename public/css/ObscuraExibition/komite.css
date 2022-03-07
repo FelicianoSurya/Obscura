@@ -130,6 +130,7 @@ html{
 
 }
 
+
 .image-box .image{
     width: 200px;
     height: 200px;
@@ -143,12 +144,16 @@ html{
     border-radius: 50%;
 }
 
+#frame-bph{
+    bottom:120px !important;
+}
 
 .komite img{
     position: absolute;
     left: center;
     bottom: 110px !important;;
 }
+
 
 .komite .image-bawah{
     padding: 0px 350px;
@@ -210,6 +215,10 @@ html{
         min-height: 100vh;
     }
 
+    .section-2 .topic{
+        margin-bottom:60px;
+    }
+
     .people-3{
         min-height: 150vh !important;
     }
@@ -233,11 +242,5 @@ html{
     .komite .kom{
         display: flex;
         flex-direction: column;
-    }
-
-    .komite .kom .image-box{
-        margin-top:70px;
-        margin-bottom:70px;
-
     }
 }

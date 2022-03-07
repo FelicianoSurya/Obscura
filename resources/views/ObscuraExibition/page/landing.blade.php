@@ -39,7 +39,7 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         @foreach($favourites as $data)
-                        <div class="swiper-slide box-image" style="background-image:url({{ asset('storage/images/competition/' . '/' . $data['image']) }})"><img loading="lazy" class="w-100"src="{{ asset('images/ObscuraExibition/Frame/twibon.png') }}" alt=""></div>
+                        <div class="swiper-slide box-image" style="background-image:url({{ asset('storage/images/competition/' . '/' . $data['image']) }})"><img class="w-100"src="{{ asset('images/ObscuraExibition/Frame/twibon.png') }}" alt=""></div>
 
 
                         <!-- <div class="swiper-slide box-image"><img src="{{ asset('storage/Images/Competition') . '/' . $data['image'] }}" alt=""></div> -->
