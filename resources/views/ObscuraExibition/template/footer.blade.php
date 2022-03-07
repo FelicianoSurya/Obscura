@@ -3,9 +3,8 @@
         <div class="mt-5 mt-lg-0 col-lg-4 col-12 d-flex flex-column align-items-center text-center">
             <h4>SOCIAL MEDIA</h4>
             <div class="d-flex">
-                <a class="p-2" href=""><img src="{{ asset('images/ObscuraExibition/Logo/instagram.png') }}" width="70"></a>
-                <a class="p-2" href=""><img src="{{ asset('images/ObscuraExibition/Logo/youtube.png') }}" width="70"></a>
-                <a class="p-2" href=""><img src="{{ asset('images/ObscuraExibition/Logo/tiktok.png') }}" width="80"></a>
+                <a class="p-2" href="https://www.instagram.com/obscura.exhibition" target="_blank"><img src="{{ asset('images/ObscuraExibition/Logo/instagram.png') }}" width="70"></a>
+                <a class="p-2" href="https://www.youtube.com/channel/UCIqCG26CwjdO7PVRssmxa3A" target="_blank"><img src="{{ asset('images/ObscuraExibition/Logo/youtube.png') }}" width="70"></a>
             </div>
         </div>
         <div class="col-lg-1"></div>
