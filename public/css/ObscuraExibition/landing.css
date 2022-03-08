@@ -231,7 +231,7 @@ html{
 
 .section-2 .box-image{
     width: 500px;
-    height: 374px;
+    height: 374px!important;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -253,7 +253,7 @@ html{
     
     .section-2 .box-image{
         width: 600px;
-        height: 400px;
+        height: 299px!important;
         background-color: black;
         overflow: hidden;
     }
