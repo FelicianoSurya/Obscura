@@ -342,8 +342,16 @@
                         _token : _token
                     },
                     success : function(result){
-                        $(".now").hide();
-                        $(".voted").show();
+                        if(result.message == 'coin habis'){
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'NO COIN VOTE',
+                            text: 'Your coin vote already zero',
+                            }); 
+                        }else{
+                            $(".now").hide();
+                            $(".voted").show();
+                        }
                     },
                     error : function(xhr){
                         if(xhr.responseJSON.message == 'Your email address is not verified.'){

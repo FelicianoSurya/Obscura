@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use App\Models\Gallery;
 use App\Models\Likes;
+use App\Models\User;
 use App\Models\Vote;
 
 class GalleryController extends Controller
@@ -141,15 +142,19 @@ class GalleryController extends Controller
     public function addVote(Request $request){
         $userID = $request['userID'];
         $galleryID = $request['galleryID'];
-        $vote = Vote::where('user_id',$userID)->get();
-        
-        if($vote){
-            Vote::where('user_id',$userID)->update(['gallery_id' => $galleryID]);
+        $user = User::where('id',$userID)->first();
+
+        if($user->vote < 1){
+            return response()->json(['message' => 'coin habis']);
         }else{
             Vote::create([
                 'user_id' => $userID,
                 'gallery_id' => $galleryID
             ]);
+            
+            $voteUpdate = $user->vote - 1;
+
+            User::where('id',$userID)->update(['vote' => $voteUpdate]);
         }
     }
 }

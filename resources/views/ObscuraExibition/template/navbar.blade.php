@@ -20,7 +20,8 @@
         <a href="{{ route('register') }}" class="fs-6 ">Register</a>
         @endif
     @else
-        <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>a
+        <p class="font-goudy font-yellow pe-5">Vote coin : {{ Auth::user()->vote }}</p>
+        <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>
         @if(Auth::user()->role == 'admin')
         <a href="{{ route('admin') }}">Admin Panel</a>
         @endif
@@ -64,7 +65,10 @@
                 @endif
             @else
                 <div class="d-flex">
-                    <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>
+                    <div class="d-flex flex-column">
+                        <p class="font-goudy font-yellow">{{ Auth::user()->name }}</p>
+                        <p class="font-goudy font-yellow">Vote coin : {{ Auth::user()->vote }}</p>
+                    </div>
                     @if(Auth::user()->role == 'admin')
                     <a href="{{ route('admin') }}">Admin Panel</a>
                     @endif
