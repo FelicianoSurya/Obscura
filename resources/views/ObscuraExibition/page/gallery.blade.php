@@ -351,6 +351,7 @@
                         }else{
                             $(".now").hide();
                             $(".voted").show();
+                            $('#coin').html(result.vote);
                         }
                     },
                     error : function(xhr){

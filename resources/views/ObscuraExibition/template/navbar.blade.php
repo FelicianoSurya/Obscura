@@ -20,7 +20,7 @@
         <a href="{{ route('register') }}" class="fs-6 ">Register</a>
         @endif
     @else
-        <p class="font-goudy font-yellow pe-5">Vote coin : {{ Auth::user()->vote }}</p>
+        <p class="font-goudy font-yellow pe-5">Vote coin : <span id="coin" class="ps-1">{{ Auth::user()->vote }}</span></p>
         <p class="font-goudy font-yellow pe-2">{{ Auth::user()->name }}</p>
         @if(Auth::user()->role == 'admin')
         <a href="{{ route('admin') }}">Admin Panel</a>

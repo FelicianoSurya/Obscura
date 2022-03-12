@@ -155,6 +155,8 @@ class GalleryController extends Controller
             $voteUpdate = $user->vote - 1;
 
             User::where('id',$userID)->update(['vote' => $voteUpdate]);
+            
+            return response()->json(['vote' => $voteUpdate]);
         }
     }
 }
